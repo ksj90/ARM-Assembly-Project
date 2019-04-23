@@ -24,22 +24,22 @@ led_ON:
 		
 		ldr r3,=GPGDAT
 		cmp r0,#1
-		ldrEQ r4,=0xE0 //4¹ø Â° LED ÄÑÁü  
+		ldrEQ r4,=0xE0 //4ë²ˆ ì§¸ LED ì¼œì§  
 		strEQ r4,[r3]
 		bEQ my_delay2
 		
 		cmpNE r0,#2
-		ldrEQ r4,=0xD0 //5¹ø Â° LED ÄÑÁü
+		ldrEQ r4,=0xD0 //5ë²ˆ ì§¸ LED ì¼œì§
 		strEQ r4,[r3]
 		bEQ my_delay2
   		 
 		cmpNE r0,#3
-		ldrEQ r4,=0xB0 //6¹ø Â° LED ÄÑÁü  
+		ldrEQ r4,=0xB0 //6ë²ˆ ì§¸ LED ì¼œì§  
 		strEQ r4,[r3]
 		bEQ my_delay2
 		
 		cmpNE r0,#4
-		ldrEQ r4,=0x70 //7¹ø Â° LED ÄÑÁü
+		ldrEQ r4,=0x70 //7ë²ˆ ì§¸ LED ì¼œì§
 		strEQ r4,[r3]
 		bEQ my_delay2
 		
@@ -69,7 +69,7 @@ my_delay2:
 		cmp r5, r6
 		addNE r6,#1
 		bne my_delay2
-		bEQ led_OFF   -         
+		bEQ led_OFF          
 		mov pc,lr		
 
 go:
@@ -88,19 +88,19 @@ my_button_init:
 		str r8,[r7]
 		
 		ldr r0,[r7]
-		cmp r0,#0x7b //4¹ø ½ºÀ§Ä¡
+		cmp r0,#0x7b //4ë²ˆ ìŠ¤ìœ„ì¹˜
 		movEQ r0,#1   
 		movEQ pc,lr
 		
-		cmp r0,#0x77 //5¹ø ½ºÀ§Ä¡
+		cmp r0,#0x77 //5ë²ˆ ìŠ¤ìœ„ì¹˜
 		movEQ r0,#2
 		movEQ pc,lr
 		
-		cmp r0,#0x6f //6¹ø ½ºÀ§Ä¡
+		cmp r0,#0x6f //6ë²ˆ ìŠ¤ìœ„ì¹˜
 		movEQ r0,#3
 		movEQ pc,lr
 		
-		cmp r0,#0x5f //7¹ø ½ºÀ§Ä¡
+		cmp r0,#0x5f //7ë²ˆ ìŠ¤ìœ„ì¹˜
 		movEQ r0,#4
 		movEQ pc,lr
 		
