@@ -19,7 +19,7 @@ void Main()
 			Uart_Printf("%d", ran);
 			
 			start_game(ran); //게임 시작 함수(이 함수가 호출될 때 ran값 전달) 
-			button = go(); //몇 번째 버튼이 눌렸는지 대한 결과값을 button이라는 변수에 입력 
+			button = go(); //몇 번째 버튼이 눌렸는지에 대한 결과값을 button이라는 변수에 입력 
 			
 			if(ran == button) //랜덤으로 켜진 LED 번호와 누른 버튼 번호가 일치하면 
 			{
